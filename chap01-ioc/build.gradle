@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    implementation group: 'org.springframework', name: 'spring-core', version: '5.3.27'
+    // https://mvnrepository.com/artifact/org.springframework/spring-context
+    implementation group: 'org.springframework', name: 'spring-context', version: '5.3.27'
+
+    implementation("org.springframework:spring-core:5.3.27")
+    implementation("org.springframework:spring-context:5.3.27")
+    implementation("org.springframework:spring-beans:5.3.27")
+    implementation("org.springframework:spring-expression:5.3.27")
+    implementation("org.springframework:spring-aop:5.3.27")
+    implementation("commons-logging:commons-logging:1.2")
+
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
